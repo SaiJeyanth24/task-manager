@@ -64,6 +64,11 @@ body {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
+  padding: 2rem 1.5rem;
+}
+
+#task-manager {
+  padding: 0 1rem;
 }
 
 h1,
