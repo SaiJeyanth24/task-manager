@@ -1,49 +1,35 @@
 # Task Manager App
 
-A production-ready React task manager built with Vite, optimized for speed, usability, and deployability.
+This React task manager is a polished, browser-based productivity tool built with Vite. It is designed to show how a modern single-page app can combine intuitive UX, responsive layout, and persistent local storage without adding backend complexity.
 
-This project is designed to demonstrate strong frontend engineering skills for interview-ready portfolios:
+The app lets users create tasks with due dates and priority labels, then filter those tasks by all, active, or completed states. It keeps task data locally using `localStorage`, so the list remains available if the page is refreshed or the browser is reopened.
 
-- Modern React architecture with clean component composition
-- Persistent local data storage for offline-ready behavior
-- Filtered task views with clear user feedback
-- GitHub Pages deployment for a fully hosted static site
+## What this project does
 
----
+This task manager supports the full task lifecycle for a small productivity workflow. Users can:
 
-## Why this project matters
+- Add a new task with text, a due date, and a priority level
+- Mark tasks as completed or return them to active status
+- Remove tasks that are no longer needed
+- Filter the view by all tasks, active tasks, or completed tasks
+- See live counts for each filter category
+- View a helpful empty state when there are no tasks
 
-This app is ideal for FAANG-style interviews because it showcases:
+The UI is responsive and works on desktop, tablet, and mobile screen sizes. Form controls, filter buttons, and task cards adapt to smaller widths so the app remains easy to use on phones and tablets.
 
-- **User-centered design**: intuitive task entry, date handling, priorities, and empty-state messaging
-- **State management**: derived filtering state and local storage synchronization
-- **Deployment readiness**: Vite build optimization and GitHub Pages hosting
-- **Code quality**: clean structure, reusable components, and clear data flow
+## Why this project is useful
 
----
+This app is a good example of a practical frontend project because it combines several important concepts:
 
-## Core features
+- Component-based structure with reusable UI pieces
+- Controlled form inputs and user interactions in React
+- Derived state for filtering and task counts
+- Browser storage persistence for a better offline-ready experience
+- Build and deployment configuration for static hosting
 
-- Add a task with title, due date, and priority
-- Active / completed / all task filters with live counts
-- Toggle task completion and delete tasks
-- Local storage persistence under the key `taskmanagerappContext`
-- Graceful empty state when no tasks exist
-- GitHub Pages deployment support with `npm run deploy`
+It also demonstrates good development practices by separating layout and presentation into CSS files, using semantic HTML, and keeping data updates predictable.
 
----
-
-## Tech stack
-
-- React 19
-- Vite
-- JavaScript
-- CSS modules / scoped styles
-- GitHub Pages
-
----
-
-## Running locally
+## Run the app locally
 
 Install dependencies:
 
@@ -57,54 +43,38 @@ Start the development server:
 npm run dev
 ```
 
-Build for production:
+Build a production version:
 
 ```bash
 npm run build
 ```
 
-Preview the production build:
+Preview the production build locally:
 
 ```bash
 npm run preview
 ```
 
----
-
 ## Deployment
 
-This project is configured for GitHub Pages deployment.
+The project includes a deploy script for GitHub Pages.
 
-Run:
+Publish the built site with:
 
 ```bash
 npm run deploy
 ```
 
-Ensure `vite.config.js` includes the correct `base` path for your repository, for example:
+If your repository is hosted under a subpath, set the `base` option in `vite.config.js` to the correct repo name.
 
-```js
-export default defineConfig({
-  base: '/task-manager/',
-  plugins: [react()]
-})
-```
+## Tech stack
 
----
-
-## What I learned
-
-- building a polished React UI with Vite
-- handling browser storage and app initialization
-- writing deploy scripts for static hosting
-- designing an app focused on real user workflows
-
----
+- React 19
+- Vite
+- JavaScript
+- CSS for styling and responsive layout
+- GitHub Pages deployment support
 
 ## Future improvements
 
-- task edit flow
-- backend API integration
-- authentication and multi-user support
-- drag-and-drop task ordering
-- responsive mobile enhancements
+Potential enhancements include task editing, backend sync, drag-and-drop ordering, and user authentication. These additions would extend the app into a more complete task management experience.
